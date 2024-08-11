@@ -1,0 +1,136 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering content */
+.bg-gray-100 {
+    background-color: #f7f7f7;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Title and Header */
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+/* Card Container */
+.max-w-md {
+    max-width: 28rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+}
+
+/* Button */
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message */
+.text-red-500 {
+    color: #ff0000;
+}
+
+/* Weather Result */
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}

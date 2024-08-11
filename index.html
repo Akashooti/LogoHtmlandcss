@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Global Styles */
+      /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin: 0;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.navbar-nav a:hover {
+    color: #ddd;
+    background-color: #444;
+    border-radius: 0.25rem;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    background-color: #f59e0b;
+    color: #1f2937;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #eab308;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 3rem 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.section-description {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #555;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:shadow-xl:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.bg-gray-200 {
+    background-color: #e5e7eb;
+}
+
+.bg-gray-800 {
+    background-color: #1f2937;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-gray-800 {
+    color: #1f2937;
+}
+
+.bg-yellow-500 {
+    background-color: #f59e0b;
+}
+
+.bg-yellow-600 {
+    background-color: #eab308;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+.duration-300 {
+    transition-duration: 0.3s;
+}
+
+/* Footer Styling */
+footer {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+           
+        }
+
+        .footer-content {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-info,
+        .footer-links,
+        .footer-contact,
+        .footer-social {
+            margin-bottom: 1rem;
+        }
+
+        .footer-info h4,
+        .footer-links h4,
+        .footer-contact h4,
+        .footer-social h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 1rem;
+            font-size: 0.875rem;
+        }
+        .contacts{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .contacts {
+        font-size: large;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .text-xl {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container1">
+            <a href="index.html" class="navbar-brand">Your Company</a>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Welcome to Our Website</h1>
+            <p class="hero-subtitle">Your gateway to an amazing experience</p>
+            <a href="wheater.html" class="hero-button">Weather Check</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h2 class="section-title">Home</h2>
+            <p class="section-description">Welcome to the home page! Explore the features and services we offer.</p>
+
+            <!-- Features Section -->
+            <section id="features" class="mb-12">
+                <h3 class="section-title">Our Features</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl">
+                        <h3 class="text-xl font-semibold mb-4">Feature 1</h3>
+                        <p>Details about Feature 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl">
+                        <h3 class="text-xl font-semibold mb-4">Feature 2</h3>
+                        <p>Details about Feature 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl">
+                        <h3 class="text-xl font-semibold mb-4">Feature 3</h3>
+                        <p>Details about Feature 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="bg-gray-200 py-12">
+                <h3 class="section-title">What Our Clients Say</h3>
+                <div class="container">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-4 mb-6">
+                            <p class="text-lg mb-4">“Great experience! The team was professional and the results exceeded our expectations.”</p>
+                            <p class="font-semibold">John Doe</p>
+                            <p>CEO, Company A</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-4 mb-6">
+                            <p class="text-lg mb-4">“Fantastic service and amazing quality. Highly recommend to anyone looking for top-notch work.”</p>
+                            <p class="font-semibold">Jane Smith</p>
+                            <p>Marketing Director, Company B</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-4 mb-6">
+                            <p class="text-lg mb-4">“The team delivered on time and their attention to detail was remarkable. Will definitely use again.”</p>
+                            <p class="font-semibold">Michael Johnson</p>
+                            <p>Product Manager, Company C</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section id="cta" class="bg-blue-600 text-white py-12">
+                <div class="container">
+                    <h3 class="section-title">Ready to Get Started?</h3>
+                    <p class="text-lg mb-6">Join us today and start enjoying the benefits of our services.</p>
+                    <a href="/contact" class="contacts">Contact Us</a>
+                </div>
+            </section>
+
+            <!-- Featured Blog Section -->
+            <section id="blog" class="py-12">
+                <h3 class="section-title">From Our Blog</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4">Blog Post 1</h4>
+                        <p>Summary of Blog Post 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4">Blog Post 2</h4>
+                        <p>Summary of Blog Post 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4">Blog Post 3</h4>
+                        <p>Summary of Blog Post 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-info mb-4">
+                    <h4 class="text-lg font-semibold">About Us</h4>
+                    <p>We are dedicated to providing top-notch services and solutions for our clients. Our mission is to deliver quality and excellence in everything we do.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links mb-4">
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <ul class="list-none p-0">
+                        <li><a href="index.html" class="text-white hover:underline">Home</a></li>
+                        <li><a href="about.html" class="text-white hover:underline">About</a></li>
+                        <li><a href="services.html" class="text-white hover:underline">Services</a></li>
+                        <li><a href="features.html" class="text-white hover:underline">Features</a></li>
+                        <li><a href="contact.html" class="text-white hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-contact mb-4">
+                    <h4 class="text-lg font-semibold">Contact Us</h4>
+                    <p>Email: <a href="mailto:info@yourcompany.com" class="text-white hover:underline">info@yourcompany.com</a></p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-social mb-4">
+                    <h4 class="text-lg font-semibold">Follow Us</h4>
+                    <div>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="text-white hover:underline">Facebook</a>
+                        <a href="#" class="text-white hover:underline">Twitter</a>
+                        <a href="#" class="text-white hover:underline">Instagram</a>
+                        <a href="#" class="text-white hover:underline">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="wheather.css">
+</head>
+<body>
+    <div class="bg-gray-100 min-h-screen flex flex-col items-center py-12">
+        <h1 class="text-4xl font-bold mb-6">Weather Information</h1>
+        <div class="max-w-md w-full px-6 py-4 bg-white rounded-lg shadow-lg">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4"
+            />
+            <button
+                id="searchButton"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >
+                Search
+            </button>
+
+            <p id="errorMessage" class="text-red-500 mt-4"></p>
+
+            <div id="resultContainer" class="mt-6"></div>
+        </div>
+    </div>
+
+    <script src="/wheater.js"></script>
+</body>
+</html>
